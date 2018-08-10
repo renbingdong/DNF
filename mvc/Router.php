@@ -22,6 +22,9 @@ class Router {
         if ($markPos !== false) {
             $requestUri = substr($requestUri, 0, $markPos);
         }
+        if ($requestUri == '/') {
+            $requestUri = '/index/index';
+        }
         $uriArray = explode('/', $requestUri);
         if (count($uriArray) < 2) {
             echo "request url error.";
@@ -43,8 +46,14 @@ class Router {
             $result = $controllerObj->$action();
             if (is_array($result)) {
                 echo json_encode($result);
-            } else {
-                echo $result;
+            } elseif (is_string($result)) {
+                $result = trim($result);
+                $viewArray = explode('/', $result);
+                if (count($viewArray) < 2) {
+                    echo $result;
+                } else {
+                    
+                }
             }
         } catch (\Exception $e) {
             error_log($e->getMessage());
