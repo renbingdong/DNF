@@ -23,8 +23,9 @@ class Router {
             $requestUri = substr($requestUri, 0, $markPos);
         }
         if ($requestUri == '/') {
-            $requestUri = '/index/index';
+            $requestUri = 'index/index';
         }
+        $requestUri = ltrim($requestUri, '/');
         $uriArray = explode('/', $requestUri);
         if (count($uriArray) < 2) {
             echo "request url error.";
@@ -48,11 +49,13 @@ class Router {
                 echo json_encode($result);
             } elseif (is_string($result)) {
                 $result = trim($result);
-                $viewArray = explode('/', $result);
-                if (count($viewArray) < 2) {
-                    echo $result;
+                $file = __DIR__ . '/view/' . $result . '.php';
+                if (!is_file($file)) {
+                    echo "view not exists.";
                 } else {
-                    
+                    $data = $controllerObj->data;
+                    extract($data);
+                    require "{$file}";
                 }
             }
         } catch (\Exception $e) {
