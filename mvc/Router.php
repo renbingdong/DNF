@@ -23,7 +23,7 @@ class Router {
             $requestUri = substr($requestUri, 0, $markPos);
         }
         if ($requestUri == '/') {
-            $requestUri = 'index/index';
+            $requestUri = 'index/welcome';
         }
         $requestUri = ltrim($requestUri, '/');
         $uriArray = explode('/', $requestUri);
@@ -48,6 +48,10 @@ class Router {
             if (is_array($result)) {
                 echo json_encode($result);
             } elseif (is_string($result)) {
+                $layout = false;
+                if ($result != 'index/welcome') {
+                    $layout = true;
+                }
                 $result = trim($result);
                 $file = __DIR__ . '/view/' . $result . '.php';
                 if (!is_file($file)) {
@@ -55,7 +59,11 @@ class Router {
                 } else {
                     $data = $controllerObj->data;
                     extract($data);
-                    require "{$file}";
+                    if ($layout) {
+                        require __DIR__ . '/view/layout/default.php';
+                    } else {
+                        require "{$file}";
+                    }
                 }
             }
         } catch (\Exception $e) {
