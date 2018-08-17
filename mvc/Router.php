@@ -22,9 +22,7 @@ class Router {
         if ($markPos !== false) {
             $requestUri = substr($requestUri, 0, $markPos);
         }
-        if ($requestUri == '/') {
-            $requestUri = 'index/welcome';
-        }
+        $requestUri = \mvc\Rewrite::getUrl($requestUri);
         $requestUri = ltrim($requestUri, '/');
         $uriArray = explode('/', $requestUri);
         if (count($uriArray) < 2) {

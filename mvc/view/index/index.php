@@ -88,6 +88,9 @@
                     </ul>
                 </div>
             </div>
+            <div class="tab-pane-bottom">
+
+            </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="product">
         
@@ -99,81 +102,8 @@
     </div>
 </div>
 
-<style type="text/css">
-    .nav {
-        padding: 10px 20%;
-    }
-    .nav li {
-        text-align: center;
-        width: 16%;
-    }
-    .nav li a{
-        border: none;
-    }
-    .tab-pane {
-        min-height: 60%;
-        background-color: #F0F0F0;
-        padding: 20px 5%;
-        overflow: hidden;
-    }
-    .tab-pane-left {
-        width: 60%;
-        float: left;
-        height: 60%;
-        background-color: white;
-        overflow: hidden;
-    }
-    .tab-pane-right {
-        width: 36%;
-        float: left;
-        height: 60%;
-        overflow: hidden;
-        margin-left: 30px;
-    }
-    .tab-pane-right .div1 {
-        width: 100%;
-        background-color: white;
-        height: 43%;
-        overflow: hidden;
-    }
-
-    .tab-pane-right .div2 {
-        background-color: white;
-        width: 100%;
-        height: 24%;
-        margin-top: 25px;
-        overflow: hidden;
-    }
-
-    .tab-pane-right .div3 {
-        background-color: white;
-        width: 100%;
-        height: 24%;
-        margin-top: 25px;
-        overflow: hidden;
-    }
-    .list-group-item {
-        border: none;
-        margin-left: 20px;
-        padding: 5px 15px;
-        font-family: fantasy;
-        color: blue;
-    }
-    .list-title {
-        margin-left: 0px;
-        padding: 10px 15px;
-        font-size: 15px;
-    }
-    .slide {
-        height: 100%;
-    }
-    .carousel-inner {
-        height: 100%;
-    }
-    .carousel-inner .item {
-        height: 100%;
-        padding: 0px 20%;
-    }
-</style>
 <script src="/static/js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
+<style type="text/css">
+    @import"/static/css/index.css"
+</style>

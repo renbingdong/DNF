@@ -42,7 +42,7 @@
                 <p>你想开着兰博基尼泡妞么？</p>
                 <p>你想成为世界的主宰么？</p>
                 <p>那还在等什么，快来加入我们吧</p>
-                <p><a href="/index/index" style="color:white;">点击进入</a></p>
+                <p><a href="/home" style="color:white;">点击进入</a></p>
             </div>
         </div>
     </body>
