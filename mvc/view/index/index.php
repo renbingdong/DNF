@@ -31,17 +31,17 @@
 
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="..." alt="...">
+                            <img src="/static/pic/roll1.jpg">
                             <div class="carousel-caption">
                             </div>
                         </div>
                         <div class="item">
-                            <img src="..." alt="...">
+                            <img src="/static/pic/roll2.jpg">
                             <div class="carousel-caption">
                             </div>
                         </div>
                         <div class="item">
-                            <img src="..." alt="...">
+                            <img src="/static/pic/roll3.jpg">
                             <div class="carousel-caption">
                             </div>
                         </div>
@@ -111,7 +111,7 @@
         border: none;
     }
     .tab-pane {
-        min-height: 500px;
+        min-height: 60%;
         background-color: #F0F0F0;
         padding: 20px 5%;
         overflow: hidden;
@@ -119,36 +119,38 @@
     .tab-pane-left {
         width: 60%;
         float: left;
-        max-height: 600px;
-        min-height: 450px;
+        height: 60%;
         background-color: white;
+        overflow: hidden;
     }
     .tab-pane-right {
         width: 36%;
         float: left;
-        max-height: 600px;
-        min-height: 450px;
+        height: 60%;
         overflow: hidden;
         margin-left: 30px;
     }
     .tab-pane-right .div1 {
         width: 100%;
         background-color: white;
-        min-height: 200px;
+        height: 43%;
+        overflow: hidden;
     }
 
     .tab-pane-right .div2 {
         background-color: white;
         width: 100%;
-        min-height: 100px;
+        height: 24%;
         margin-top: 25px;
+        overflow: hidden;
     }
 
     .tab-pane-right .div3 {
         background-color: white;
         width: 100%;
-        min-height: 100px;
+        height: 24%;
         margin-top: 25px;
+        overflow: hidden;
     }
     .list-group-item {
         border: none;
@@ -161,6 +163,16 @@
         margin-left: 0px;
         padding: 10px 15px;
         font-size: 15px;
+    }
+    .slide {
+        height: 100%;
+    }
+    .carousel-inner {
+        height: 100%;
+    }
+    .carousel-inner .item {
+        height: 100%;
+        padding: 0px 20%;
     }
 </style>
 <script src="/static/js/jquery-3.3.1.min.js" type="text/javascript"></script>
